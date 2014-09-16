@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#container
+{
+width:1320px;height:600px;
+}
+#header
+{
+background-color:lightblue;
+text-align:center;
+}
+#menu
+{
+background-color:ivory;height:500px;width:220px;float:left;
+}
+#content
+{
+background-color:lavender;height:500px;width:1100px;float:left;
+}
+#footer
+{
+background-color:lightblue;text-align:center;
+}
+</style>
+<script>
+
+function func(link)
+{
+document.getElementById("content").innerHTML=link;
+window.navigate(link);
+}
+</script>
+</head>
+<body>
+
+<div id="container" >
+
+<div id="header">
+<h1 style="margin-bottom:0px;">Introduction To Web Technologies</h1></div>
+
+<div id="menu">
+<h2>Menu</h2>
+<ul>
+<li><a href="http://www.w3schools.com/html/default.asp" target="content">HTML</a></li>
+<li><a href="http://www.w3schools.com/css/default.asp" target="content">CSS</a></li>
+<li><a href="http://www.w3schools.com/js/default.asp" target="content">JavaScript</a></li>
+<li><a href="http://www.w3schools.com/ajax/default.asp" target="content">AJAX</a></li>
+<li><a href="http://www.w3schools.com/vbscript/default.asp" target="content">VBScript</a></li>
+</div>
+
+<div id="content">
+Content goes here</div>
+
+<div id="footer">
+Copyright &copy webtech.com</div>
+
+</div>
+ 
+</body>
+</html>

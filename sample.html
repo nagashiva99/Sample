@@ -1,0 +1,103 @@
+<html>
+<head>
+<script>
+function employee(id,name,sal)
+{
+this.id=id;
+this.name=name;
+this.sal=sal;
+}
+function add()
+{
+var id=document.getElementById("emid").value;
+var name=document.getElementById("emname").value;
+var sal=document.getElementById("emsal").value;
+var tbl=document.getElementById("emptable");
+if(id!=""&&name!=""&&sal!=""){
+if(validatesal()){
+var r=tbl.insertRow(1);
+r.insertCell(0).innerHTML=id;
+r.insertCell(1).innerHTML=name;
+r.insertCell(2).innerHTML=sal;
+}
+else{
+clearr();
+}
+}
+else
+alert("All fields are mandatory");
+}
+function clearr()
+{
+document.getElementById("emid").value="";
+document.getElementById("emname").value="";
+document.getElementById("emsal").value="";
+}
+function validateid()
+{
+var id=document.getElementById("emid").value;
+if(id=="")
+{
+alert("id cannot be blank");
+document.getElementById("emid").focus();
+}
+else if(isNaN(id))
+{
+alert("Enter id Correctly");
+document.getElementById("emid").focus();
+}
+}
+function validatename()
+{
+var name=document.getElementById("emname").value;
+if(name=="")
+{
+alert("name cannot be blank");
+document.getElementById("emname").focus();
+}
+}
+function validatesal()
+{
+var sal=document.getElementById("emsal").value;
+if(sal=="")
+{
+alert("salary cannot be blank");
+document.getElementById("emsal").focus();
+return false;
+}
+else if(isNaN(sal))
+{
+alert("Enter Salary Correctly");
+document.getElementById("emsal").focus();
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body>
+
+
+<table>
+<tr>
+
+<td>id:</td><td><input type=text id="emid"  ></td>
+</tr>
+<tr>
+<td>Name:</td><td><input type=text id="emname" onfocus="validateid()"></td>
+</tr>
+<tr>
+<td>salary:</td><td><input type=text id="emsal" onfocus="validatename()"></td>
+</tr>
+<tr><td>
+<button id="cli1" style="background-color:aqua;" onmousedown="add()" onmouseup="clearr()">ADD</button>
+</td>
+<td>
+<button id="res" style="background-color:aqua;" onclick="clearr()" >Reset</button>
+</td></tr>
+</table>
+<table id="emptable" cellpadding="5" border="1">
+<tr><th>EmpId</th><th>EmpName</th><th>Salary</th></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,28 @@
+
+<html>
+<body>
+
+<h4>Cell that spans two Rows:</h4>
+<table border="1">
+<tr align=center>
+  <th>Name</th>
+  <th>Telephone</th>
+</tr>
+<tr align=center>
+  <td rowspan="2">Bill Gates</td>
+  <td>555 77 854</td>
+  
+</tr>
+<tr align=center><td>1234567</td></tr>
+<tr align=center>
+   <td>Siva reddy</td>
+   <td>123456790</td>
+</tr>
+<tr align=center>
+<td>Anil Ram</td>
+<td>09876543215</td>
+</tr>
+
+</table>
+</body>
+</html>
